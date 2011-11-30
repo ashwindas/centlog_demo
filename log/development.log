@@ -60341,3 +60341,1111 @@ Rendered shared/_notice_messages.html.erb (1.3ms)
 Rendered shared/_footer.html.erb (1.0ms)
 Rendered pages/home.html.erb within layouts/application (144.8ms)
 Completed 200 OK in 366ms (Views: 150.7ms | ActiveRecord: 2.6ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/ashwin/Dropbox/Courses/WebAppDev/centlog_repo/centlog/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 06:34:38 -0500
+  Processing by PagesController#home as HTML
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mAlert Load (0.3ms)[0m  [1mSELECT "alerts".* FROM "alerts" WHERE ("alerts".user_id = 1)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "transactions" WHERE ("transactions".user_id = 1)
+Rendered shared/_user_info.html.erb (16.0ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users".id = "relationships".followed_id WHERE (("relationships".follower_id = 1))[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users".id = "relationships".follower_id WHERE (("relationships".followed_id = 1))
+Rendered shared/_stats.html.erb (92.7ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "transactions" WHERE (user_id IN (SELECT followed_id FROM relationships
+ WHERE follower_id = 1))[0m
+Rendered shared/_feed.html.erb (2.5ms)
+Rendered shared/_header.html.erb (8.0ms)
+Rendered devise/menu/_registration_items.html.erb (1.3ms)
+Rendered devise/menu/_login_items.html.erb (2.9ms)
+Rendered shared/_topbar.html.erb (16.6ms)
+Rendered shared/_side_bar.html.erb (0.9ms)
+Rendered shared/_notice_messages.html.erb (1.1ms)
+Rendered shared/_footer.html.erb (1.2ms)
+Rendered pages/home.html.erb within layouts/application (169.7ms)
+Completed 200 OK in 364ms (Views: 178.8ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/users/sign_out" for 127.0.0.1 at 2011-11-30 06:34:43 -0500
+  Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"d1zcmFpIGX3/15jVulmbxze103NRNUo+Tu3/18+u2vs="}
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 418ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 06:34:43 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (6.6ms)
+Rendered devise/menu/_registration_items.html.erb (1.2ms)
+Rendered devise/menu/_login_items.html.erb (3.9ms)
+Rendered shared/_topbar.html.erb (9.0ms)
+Rendered shared/_side_bar.html.erb (1.6ms)
+Rendered shared/_notice_messages.html.erb (1.0ms)
+Rendered shared/_footer.html.erb (1.0ms)
+Rendered pages/home.html.erb within layouts/application (42.3ms)
+Completed 200 OK in 161ms (Views: 54.9ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users/sign_out" for 127.0.0.1 at 2011-11-30 06:35:00 -0500
+  Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"t+R8XwWWfXGsQ/ApnKZry/GvmxtEfxouC104M7XUD1g="}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 197ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 06:35:00 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (5.3ms)
+Rendered devise/menu/_registration_items.html.erb (1.2ms)
+Rendered devise/menu/_login_items.html.erb (1.3ms)
+Rendered shared/_topbar.html.erb (7.1ms)
+Rendered shared/_side_bar.html.erb (1.5ms)
+Rendered shared/_notice_messages.html.erb (1.0ms)
+Rendered shared/_footer.html.erb (1.0ms)
+Rendered pages/home.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 203ms (Views: 41.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 06:35:03 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 06:35:55 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (5.0ms)
+Rendered devise/menu/_registration_items.html.erb (1.6ms)
+Rendered devise/menu/_login_items.html.erb (1.4ms)
+Rendered shared/_topbar.html.erb (21.7ms)
+Rendered shared/_side_bar.html.erb (1.5ms)
+Rendered shared/_notice_messages.html.erb (1.0ms)
+Rendered shared/_footer.html.erb (1.3ms)
+Rendered pages/home.html.erb within layouts/application (62.1ms)
+Completed 200 OK in 165ms (Views: 72.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 06:36:07 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (4.4ms)
+Rendered devise/menu/_registration_items.html.erb (1.2ms)
+Rendered devise/menu/_login_items.html.erb (1.4ms)
+Rendered shared/_topbar.html.erb (11.7ms)
+Rendered shared/_side_bar.html.erb (1.5ms)
+Rendered shared/_notice_messages.html.erb (1.7ms)
+Rendered shared/_footer.html.erb (1.2ms)
+Rendered pages/home.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 82ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 06:36:08 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 06:36:45 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (6.8ms)
+Rendered devise/menu/_registration_items.html.erb (1.2ms)
+Rendered devise/menu/_login_items.html.erb (1.1ms)
+Rendered shared/_topbar.html.erb (6.4ms)
+Rendered shared/_side_bar.html.erb (1.3ms)
+Rendered shared/_notice_messages.html.erb (1.0ms)
+Rendered shared/_footer.html.erb (1.0ms)
+Rendered pages/home.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 146ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 06:36:47 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 06:37:05 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (3.2ms)
+Rendered devise/menu/_registration_items.html.erb (1.2ms)
+Rendered devise/menu/_login_items.html.erb (1.4ms)
+Rendered shared/_topbar.html.erb (9.4ms)
+Rendered shared/_side_bar.html.erb (1.5ms)
+Rendered shared/_notice_messages.html.erb (1.9ms)
+Rendered shared/_footer.html.erb (1.3ms)
+Rendered pages/home.html.erb within layouts/application (34.6ms)
+Completed 200 OK in 86ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 06:37:06 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 06:37:11 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (3.7ms)
+Rendered devise/menu/_registration_items.html.erb (1.6ms)
+Rendered devise/menu/_login_items.html.erb (1.3ms)
+Rendered shared/_topbar.html.erb (6.3ms)
+Rendered shared/_side_bar.html.erb (1.4ms)
+Rendered shared/_notice_messages.html.erb (1.1ms)
+Rendered shared/_footer.html.erb (1.2ms)
+Rendered pages/home.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 143ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 06:37:12 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 06:37:17 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (4.3ms)
+Rendered devise/menu/_registration_items.html.erb (1.2ms)
+Rendered devise/menu/_login_items.html.erb (1.3ms)
+Rendered shared/_topbar.html.erb (7.9ms)
+Rendered shared/_side_bar.html.erb (6.1ms)
+Rendered shared/_notice_messages.html.erb (1.1ms)
+Rendered shared/_footer.html.erb (1.0ms)
+Rendered pages/home.html.erb within layouts/application (36.4ms)
+Completed 200 OK in 115ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 06:37:18 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 06:37:22 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (3.8ms)
+Rendered devise/menu/_registration_items.html.erb (1.5ms)
+Rendered devise/menu/_login_items.html.erb (1.4ms)
+Rendered shared/_topbar.html.erb (7.3ms)
+Rendered shared/_side_bar.html.erb (1.6ms)
+Rendered shared/_notice_messages.html.erb (1.3ms)
+Rendered shared/_footer.html.erb (1.2ms)
+Rendered pages/home.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 131ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 06:37:23 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 06:37:40 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (3.5ms)
+Rendered devise/menu/_registration_items.html.erb (1.4ms)
+Rendered devise/menu/_login_items.html.erb (1.4ms)
+Rendered shared/_topbar.html.erb (15.4ms)
+Rendered shared/_side_bar.html.erb (2.2ms)
+Rendered shared/_notice_messages.html.erb (1.2ms)
+Rendered shared/_footer.html.erb (1.5ms)
+Rendered pages/home.html.erb within layouts/application (39.6ms)
+Completed 200 OK in 106ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 06:37:41 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 06:37:53 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (3.2ms)
+Rendered devise/menu/_registration_items.html.erb (1.3ms)
+Rendered devise/menu/_login_items.html.erb (1.3ms)
+Rendered shared/_topbar.html.erb (6.4ms)
+Rendered shared/_side_bar.html.erb (42.4ms)
+Rendered shared/_notice_messages.html.erb (1.0ms)
+Rendered shared/_footer.html.erb (1.1ms)
+Rendered pages/home.html.erb within layouts/application (67.6ms)
+Completed 200 OK in 114ms (Views: 73.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 06:37:56 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 06:38:17 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (11.8ms)
+Rendered devise/menu/_registration_items.html.erb (1.3ms)
+Rendered devise/menu/_login_items.html.erb (1.4ms)
+Rendered shared/_topbar.html.erb (12.5ms)
+Rendered shared/_side_bar.html.erb (1.3ms)
+Rendered shared/_notice_messages.html.erb (1.0ms)
+Rendered shared/_footer.html.erb (1.2ms)
+Rendered pages/home.html.erb within layouts/application (45.1ms)
+Completed 200 OK in 180ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 06:38:18 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 06:38:25 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (8.1ms)
+Rendered devise/menu/_registration_items.html.erb (1.3ms)
+Rendered devise/menu/_login_items.html.erb (6.0ms)
+Rendered shared/_topbar.html.erb (10.8ms)
+Rendered shared/_side_bar.html.erb (1.5ms)
+Rendered shared/_notice_messages.html.erb (1.7ms)
+Rendered shared/_footer.html.erb (1.2ms)
+Rendered pages/home.html.erb within layouts/application (51.6ms)
+Completed 200 OK in 148ms (Views: 67.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 06:38:26 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 06:38:54 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (7.4ms)
+Rendered devise/menu/_registration_items.html.erb (1.5ms)
+Rendered devise/menu/_login_items.html.erb (1.5ms)
+Rendered shared/_topbar.html.erb (24.3ms)
+Rendered shared/_side_bar.html.erb (2.5ms)
+Rendered shared/_notice_messages.html.erb (3.3ms)
+Rendered shared/_footer.html.erb (1.2ms)
+Rendered pages/home.html.erb within layouts/application (55.5ms)
+Completed 200 OK in 193ms (Views: 76.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 06:38:55 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 06:59:34 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (7.1ms)
+Rendered devise/menu/_registration_items.html.erb (1.5ms)
+Rendered devise/menu/_login_items.html.erb (1.2ms)
+Rendered shared/_topbar.html.erb (12.2ms)
+Rendered shared/_side_bar.html.erb (1.7ms)
+Rendered shared/_notice_messages.html.erb (1.2ms)
+Rendered shared/_footer.html.erb (1.5ms)
+Rendered pages/home.html.erb within layouts/application (226.1ms)
+Completed 200 OK in 332ms (Views: 271.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 06:59:38 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-11-30 06:59:42 -0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.6ms)
+Rendered shared/_header.html.erb (5.8ms)
+Rendered devise/menu/_registration_items.html.erb (1.5ms)
+Rendered devise/menu/_login_items.html.erb (1.5ms)
+Rendered shared/_topbar.html.erb (15.0ms)
+Rendered shared/_side_bar.html.erb (1.4ms)
+Rendered shared/_notice_messages.html.erb (1.1ms)
+Rendered shared/_footer.html.erb (2.4ms)
+Rendered devise/sessions/new.html.erb within layouts/application (72.2ms)
+Completed 200 OK in 335ms (Views: 233.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/images/favicon.ico" for 127.0.0.1 at 2011-11-30 06:59:43 -0500
+
+ActionController::RoutingError (No route matches "/users/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.3ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-11-30 06:59:45 -0500
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (3.2ms)
+Rendered shared/_header.html.erb (4.8ms)
+Rendered devise/menu/_registration_items.html.erb (2.9ms)
+Rendered devise/menu/_login_items.html.erb (1.2ms)
+Rendered shared/_topbar.html.erb (7.8ms)
+Rendered shared/_side_bar.html.erb (1.9ms)
+Rendered shared/_notice_messages.html.erb (1.6ms)
+Rendered shared/_footer.html.erb (1.0ms)
+Rendered devise/registrations/new.html.erb within layouts/application (166.6ms)
+Completed 200 OK in 219ms (Views: 175.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/images/favicon.ico" for 127.0.0.1 at 2011-11-30 06:59:46 -0500
+
+ActionController::RoutingError (No route matches "/users/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-11-30 06:59:58 -0500
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"giOCzQA8P64cb+VduP2SrnnXUJOFkhcBpmycoajF8Mk=", "user"=>{"first_name"=>"Ashwin", "last_name"=>"Gururaja", "email"=>"ashwindas@cmu.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mSQL (0.2ms)[0m  SELECT 1 FROM "users" WHERE ("users"."email" = 'ashwindas@cmu.edu') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."confirmation_token" = 'cFLeCqyzpFMMVmzviaaX' LIMIT 1[0m
+  [1m[35mAREL (8.9ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "confirmation_token", "confirmed_at", "confirmation_sent_at", "created_at", "updated_at", "first_name", "last_name") VALUES ('ashwindas@cmu.edu', '$2a$10$kXRkPHYx60JpCO.FgpklfOfDRKLSdndMEba2p4AZ7PPZgMpQh6dsK', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 'cFLeCqyzpFMMVmzviaaX', NULL, '2011-11-30 11:59:58.870702', '2011-11-30 11:59:58.870900', '2011-11-30 11:59:58.870900', 'Ashwin', 'Gururaja')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.1ms)
+
+Sent mail to ashwindas@cmu.edu (2840ms)
+Date: Wed, 30 Nov 2011 07:00:02 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: ashwindas@cmu.edu
+Message-ID: <4ed61ac259c7a_65b31cf43503787@ashwin-ThinkPad-X301.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome ashwindas@cmu.edu!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=cFLeCqyzpFMMVmzviaaX">Confirm my account</a></p>
+Redirected to http://localhost:3000/
+Completed 302 Found in 6873ms
+
+
+Started POST "/users" for 127.0.0.1 at 2011-11-30 07:00:05 -0500
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"giOCzQA8P64cb+VduP2SrnnXUJOFkhcBpmycoajF8Mk=", "user"=>{"first_name"=>"Ashwin", "last_name"=>"Gururaja", "email"=>"ashwindas@cmu.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE ("users"."email" = 'ashwindas@cmu.edu') LIMIT 1[0m
+Rendered devise/shared/_links.erb (2.4ms)
+Rendered shared/_header.html.erb (3.5ms)
+Rendered devise/menu/_registration_items.html.erb (1.3ms)
+Rendered devise/menu/_login_items.html.erb (1.3ms)
+Rendered shared/_topbar.html.erb (5.7ms)
+Rendered shared/_side_bar.html.erb (1.4ms)
+Rendered shared/_notice_messages.html.erb (0.9ms)
+Rendered shared/_footer.html.erb (2.3ms)
+Rendered devise/registrations/new.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 379ms (Views: 40.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 07:00:07 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/users/confirmation?confirmation_token=cFLeCqyzpFMMVmzviaaX" for 127.0.0.1 at 2011-11-30 07:00:27 -0500
+  Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"cFLeCqyzpFMMVmzviaaX"}
+  [1m[35mUser Load (1.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."confirmation_token" = 'cFLeCqyzpFMMVmzviaaX' LIMIT 1
+  [1m[36mAREL (2.9ms)[0m  [1mUPDATE "users" SET "confirmation_token" = NULL, "confirmed_at" = '2011-11-30 12:00:28.368988', "updated_at" = '2011-11-30 12:00:28.369784' WHERE "users"."id" = 2[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = '2011-11-30 12:00:28.410546', "current_sign_in_at" = '2011-11-30 12:00:28.410546', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2011-11-30 12:00:28.411129' WHERE "users"."id" = 2
+Redirected to http://localhost:3000/
+Completed 302 Found in 350ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 07:00:28 -0500
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mAlert Load (0.3ms)[0m  SELECT "alerts".* FROM "alerts" WHERE ("alerts".user_id = 2)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "transactions" WHERE ("transactions".user_id = 2)[0m
+Rendered shared/_user_info.html.erb (16.8ms)
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users".id = "relationships".followed_id WHERE (("relationships".follower_id = 2))
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users".id = "relationships".follower_id WHERE (("relationships".followed_id = 2))[0m
+Rendered shared/_stats.html.erb (126.8ms)
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM "transactions" WHERE (user_id IN (SELECT followed_id FROM relationships
+ WHERE follower_id = 2))
+Rendered shared/_feed.html.erb (2.3ms)
+Rendered shared/_header.html.erb (3.7ms)
+Rendered devise/menu/_registration_items.html.erb (1.2ms)
+Rendered devise/menu/_login_items.html.erb (1.3ms)
+Rendered shared/_topbar.html.erb (9.7ms)
+Rendered shared/_side_bar.html.erb (1.3ms)
+Rendered shared/_notice_messages.html.erb (1.0ms)
+Rendered shared/_footer.html.erb (1.2ms)
+Rendered pages/home.html.erb within layouts/application (184.5ms)
+Completed 200 OK in 395ms (Views: 194.2ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 07:00:30 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started POST "/users/sign_out" for 127.0.0.1 at 2011-11-30 07:00:35 -0500
+  Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"giOCzQA8P64cb+VduP2SrnnXUJOFkhcBpmycoajF8Mk="}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 246ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 07:00:35 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (7.4ms)
+Rendered devise/menu/_registration_items.html.erb (7.2ms)
+Rendered devise/menu/_login_items.html.erb (1.3ms)
+Rendered shared/_topbar.html.erb (12.3ms)
+Rendered shared/_side_bar.html.erb (3.2ms)
+Rendered shared/_notice_messages.html.erb (1.1ms)
+Rendered shared/_footer.html.erb (1.0ms)
+Rendered pages/home.html.erb within layouts/application (44.9ms)
+Completed 200 OK in 198ms (Views: 51.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 07:00:36 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 07:00:41 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (3.4ms)
+Rendered devise/menu/_registration_items.html.erb (1.2ms)
+Rendered devise/menu/_login_items.html.erb (1.6ms)
+Rendered shared/_topbar.html.erb (6.1ms)
+Rendered shared/_side_bar.html.erb (1.2ms)
+Rendered shared/_notice_messages.html.erb (1.0ms)
+Rendered shared/_footer.html.erb (1.0ms)
+Rendered pages/home.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 70ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 07:00:42 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 07:02:35 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (4.0ms)
+Rendered devise/menu/_registration_items.html.erb (2.1ms)
+Rendered devise/menu/_login_items.html.erb (1.4ms)
+Rendered shared/_topbar.html.erb (9.9ms)
+Rendered shared/_side_bar.html.erb (1.4ms)
+Rendered shared/_notice_messages.html.erb (1.1ms)
+Rendered shared/_footer.html.erb (1.2ms)
+Rendered pages/home.html.erb within layouts/application (40.4ms)
+Completed 200 OK in 92ms (Views: 48.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 07:02:37 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 07:03:08 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (3.8ms)
+Rendered devise/menu/_registration_items.html.erb (1.3ms)
+Rendered devise/menu/_login_items.html.erb (5.6ms)
+Rendered shared/_topbar.html.erb (10.4ms)
+Rendered shared/_side_bar.html.erb (1.5ms)
+Rendered shared/_notice_messages.html.erb (1.0ms)
+Rendered shared/_footer.html.erb (2.0ms)
+Rendered pages/home.html.erb within layouts/application (36.1ms)
+Completed 200 OK in 117ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 07:03:09 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 07:12:19 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (3.7ms)
+Rendered devise/menu/_registration_items.html.erb (1.3ms)
+Rendered devise/menu/_login_items.html.erb (1.3ms)
+Rendered shared/_topbar.html.erb (7.4ms)
+Rendered shared/_side_bar.html.erb (1.5ms)
+Rendered shared/_notice_messages.html.erb (1.0ms)
+Rendered shared/_footer.html.erb (3.0ms)
+Rendered pages/home.html.erb within layouts/application (32.9ms)
+Completed 200 OK in 88ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/ashwin/Dropbox/Courses/WebAppDev/centlog_repo/centlog/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 07:52:30 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (4.5ms)
+Rendered devise/menu/_registration_items.html.erb (1.6ms)
+Rendered devise/menu/_login_items.html.erb (4.4ms)
+Rendered shared/_topbar.html.erb (23.0ms)
+Rendered shared/_side_bar.html.erb (1.7ms)
+Rendered shared/_notice_messages.html.erb (1.2ms)
+Rendered shared/_footer.html.erb (50.2ms)
+Rendered pages/home.html.erb within layouts/application (249.6ms)
+Completed 200 OK in 261ms (Views: 260.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 07:52:32 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 07:53:51 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (7.1ms)
+Rendered devise/menu/_registration_items.html.erb (1.1ms)
+Rendered devise/menu/_login_items.html.erb (3.2ms)
+Rendered shared/_topbar.html.erb (7.9ms)
+Rendered shared/_side_bar.html.erb (1.6ms)
+Rendered shared/_notice_messages.html.erb (1.0ms)
+Rendered shared/_footer.html.erb (1.2ms)
+Rendered pages/home.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 98ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 07:53:52 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 07:54:07 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (4.0ms)
+Rendered devise/menu/_registration_items.html.erb (1.4ms)
+Rendered devise/menu/_login_items.html.erb (1.4ms)
+Rendered shared/_topbar.html.erb (7.0ms)
+Rendered shared/_side_bar.html.erb (1.6ms)
+Rendered shared/_notice_messages.html.erb (1.0ms)
+Rendered shared/_footer.html.erb (1.2ms)
+Rendered pages/home.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 141ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 07:54:09 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 07:54:20 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (3.9ms)
+Rendered devise/menu/_registration_items.html.erb (1.2ms)
+Rendered devise/menu/_login_items.html.erb (1.2ms)
+Rendered shared/_topbar.html.erb (6.3ms)
+Rendered shared/_side_bar.html.erb (1.3ms)
+Rendered shared/_notice_messages.html.erb (5.0ms)
+Rendered shared/_footer.html.erb (1.1ms)
+Rendered pages/home.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 83ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 07:54:21 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 07:54:38 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (5.8ms)
+Rendered devise/menu/_registration_items.html.erb (1.2ms)
+Rendered devise/menu/_login_items.html.erb (1.2ms)
+Rendered shared/_topbar.html.erb (5.6ms)
+Rendered shared/_side_bar.html.erb (1.2ms)
+Rendered shared/_notice_messages.html.erb (1.1ms)
+Rendered shared/_footer.html.erb (1.1ms)
+Rendered pages/home.html.erb within layouts/application (101.6ms)
+Completed 200 OK in 165ms (Views: 108.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 07:54:39 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 07:54:50 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (12.7ms)
+Rendered devise/menu/_registration_items.html.erb (1.4ms)
+Rendered devise/menu/_login_items.html.erb (1.3ms)
+Rendered shared/_topbar.html.erb (7.1ms)
+Rendered shared/_side_bar.html.erb (3.4ms)
+Rendered shared/_notice_messages.html.erb (1.0ms)
+Rendered shared/_footer.html.erb (11.3ms)
+Rendered pages/home.html.erb within layouts/application (56.2ms)
+Completed 200 OK in 120ms (Views: 62.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 07:54:52 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 07:55:19 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (5.2ms)
+Rendered devise/menu/_registration_items.html.erb (1.7ms)
+Rendered devise/menu/_login_items.html.erb (1.5ms)
+Rendered shared/_topbar.html.erb (15.6ms)
+Rendered shared/_side_bar.html.erb (3.6ms)
+Rendered shared/_notice_messages.html.erb (1.0ms)
+Rendered shared/_footer.html.erb (1.2ms)
+Rendered pages/home.html.erb within layouts/application (101.8ms)
+Completed 200 OK in 180ms (Views: 108.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 07:55:21 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 07:55:30 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (3.8ms)
+Rendered devise/menu/_registration_items.html.erb (1.4ms)
+Rendered devise/menu/_login_items.html.erb (1.3ms)
+Rendered shared/_topbar.html.erb (9.8ms)
+Rendered shared/_side_bar.html.erb (1.5ms)
+Rendered shared/_notice_messages.html.erb (1.4ms)
+Rendered shared/_footer.html.erb (1.2ms)
+Rendered pages/home.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 180ms (Views: 56.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 07:55:31 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 07:55:43 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (4.1ms)
+Rendered devise/menu/_registration_items.html.erb (2.3ms)
+Rendered devise/menu/_login_items.html.erb (1.5ms)
+Rendered shared/_topbar.html.erb (11.7ms)
+Rendered shared/_side_bar.html.erb (4.6ms)
+Rendered shared/_notice_messages.html.erb (2.3ms)
+Rendered shared/_footer.html.erb (1.1ms)
+Rendered pages/home.html.erb within layouts/application (38.7ms)
+Completed 200 OK in 95ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 07:55:44 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-11-30 07:56:05 -0500
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (2.6ms)
+Rendered shared/_header.html.erb (11.6ms)
+Rendered devise/menu/_registration_items.html.erb (7.0ms)
+Rendered devise/menu/_login_items.html.erb (1.3ms)
+Rendered shared/_topbar.html.erb (12.4ms)
+Rendered shared/_side_bar.html.erb (1.3ms)
+Rendered shared/_notice_messages.html.erb (6.2ms)
+Rendered shared/_footer.html.erb (1.3ms)
+Rendered devise/registrations/new.html.erb within layouts/application (342.2ms)
+Completed 200 OK in 424ms (Views: 352.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/images/favicon.ico" for 127.0.0.1 at 2011-11-30 07:56:06 -0500
+
+ActionController::RoutingError (No route matches "/users/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-11-30 07:56:21 -0500
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NDba665IPnok0VGwEkNbr1GK64wJwC7qFb3DHyM6GMc=", "user"=>{"first_name"=>"Ashwin ", "last_name"=>"Das", "email"=>"ashwin.das@sv.cmu.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE ("users"."email" = 'ashwin.das@sv.cmu.edu') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."confirmation_token" = 'pyK2errszqWwzWBr15By' LIMIT 1[0m
+  [1m[35mAREL (0.7ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "confirmation_token", "confirmed_at", "confirmation_sent_at", "created_at", "updated_at", "first_name", "last_name") VALUES ('ashwin.das@sv.cmu.edu', '$2a$10$TZpHo.EwmXrQ858SbxZHYOtrsRYLv3teCdqN/yO2tkOfeBlGi7SxW', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 'pyK2errszqWwzWBr15By', NULL, '2011-11-30 12:56:21.968745', '2011-11-30 12:56:21.968913', '2011-11-30 12:56:21.968913', 'Ashwin ', 'Das')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.3ms)
+
+Sent mail to ashwin.das@sv.cmu.edu (1507ms)
+Date: Wed, 30 Nov 2011 07:56:25 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: ashwin.das@sv.cmu.edu
+Message-ID: <4ed627f94446f_6fa21e8dfe05405f@ashwin-ThinkPad-X301.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome ashwin.das@sv.cmu.edu!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=pyK2errszqWwzWBr15By">Confirm my account</a></p>
+Redirected to http://localhost:3000/
+Completed 302 Found in 5415ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 07:56:26 -0500
+  Processing by PagesController#home as HTML
+Rendered shared/_header.html.erb (4.0ms)
+Rendered devise/menu/_registration_items.html.erb (4.5ms)
+Rendered devise/menu/_login_items.html.erb (1.4ms)
+Rendered shared/_topbar.html.erb (14.2ms)
+Rendered shared/_side_bar.html.erb (1.5ms)
+Rendered shared/_notice_messages.html.erb (1.1ms)
+Rendered shared/_footer.html.erb (1.4ms)
+Rendered pages/home.html.erb within layouts/application (44.2ms)
+Completed 200 OK in 91ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 07:56:27 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/users/confirmation?confirmation_token=pyK2errszqWwzWBr15By" for 127.0.0.1 at 2011-11-30 07:56:47 -0500
+  Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"pyK2errszqWwzWBr15By"}
+  [1m[36mUser Load (2.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."confirmation_token" = 'pyK2errszqWwzWBr15By' LIMIT 1[0m
+  [1m[35mAREL (7.7ms)[0m  UPDATE "users" SET "confirmation_token" = NULL, "confirmed_at" = '2011-11-30 12:56:47.431591', "updated_at" = '2011-11-30 12:56:47.432010' WHERE "users"."id" = 3
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2011-11-30 12:56:47.476041', "current_sign_in_at" = '2011-11-30 12:56:47.476041', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2011-11-30 12:56:47.476589' WHERE "users"."id" = 3[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 325ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 07:56:47 -0500
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mAlert Load (0.3ms)[0m  [1mSELECT "alerts".* FROM "alerts" WHERE ("alerts".user_id = 3)[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM "transactions" WHERE ("transactions".user_id = 3)
+Rendered shared/_user_info.html.erb (97.2ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users".id = "relationships".followed_id WHERE (("relationships".follower_id = 3))[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users".id = "relationships".follower_id WHERE (("relationships".followed_id = 3))
+Rendered shared/_stats.html.erb (46.2ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "transactions" WHERE (user_id IN (SELECT followed_id FROM relationships
+ WHERE follower_id = 3))[0m
+Rendered shared/_feed.html.erb (2.8ms)
+Rendered shared/_header.html.erb (6.5ms)
+Rendered devise/menu/_registration_items.html.erb (1.1ms)
+Rendered devise/menu/_login_items.html.erb (1.2ms)
+Rendered shared/_topbar.html.erb (15.4ms)
+Rendered shared/_side_bar.html.erb (0.8ms)
+Rendered shared/_notice_messages.html.erb (1.0ms)
+Rendered shared/_footer.html.erb (1.0ms)
+Rendered pages/home.html.erb within layouts/application (208.3ms)
+Completed 200 OK in 535ms (Views: 219.4ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 07:56:48 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2011-11-30 07:56:55 -0500
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered shared/_header.html.erb (10.1ms)
+Rendered devise/menu/_registration_items.html.erb (1.3ms)
+Rendered devise/menu/_login_items.html.erb (1.1ms)
+Rendered shared/_topbar.html.erb (13.7ms)
+Rendered shared/_side_bar.html.erb (0.8ms)
+Rendered shared/_notice_messages.html.erb (0.9ms)
+Rendered shared/_footer.html.erb (1.2ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (137.3ms)
+Completed 200 OK in 323ms (Views: 146.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/images/favicon.ico" for 127.0.0.1 at 2011-11-30 07:56:56 -0500
+
+ActionController::RoutingError (No route matches "/users/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-11-30 07:56:59 -0500
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mUser Load (2.4ms)[0m  SELECT "users".* FROM "users"
+Rendered shared/_header.html.erb (4.0ms)
+Rendered devise/menu/_registration_items.html.erb (1.3ms)
+Rendered devise/menu/_login_items.html.erb (1.3ms)
+Rendered shared/_topbar.html.erb (6.1ms)
+Rendered shared/_side_bar.html.erb (0.8ms)
+Rendered shared/_notice_messages.html.erb (1.2ms)
+Rendered shared/_footer.html.erb (1.2ms)
+Rendered users/index.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 233ms (Views: 31.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 07:57:00 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (7.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 07:57:05 -0500
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mAlert Load (0.3ms)[0m  SELECT "alerts".* FROM "alerts" WHERE ("alerts".user_id = 3)
+  [1m[36mSQL (1.7ms)[0m  [1mSELECT COUNT(*) FROM "transactions" WHERE ("transactions".user_id = 3)[0m
+Rendered shared/_user_info.html.erb (26.2ms)
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users".id = "relationships".followed_id WHERE (("relationships".follower_id = 3))
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users".id = "relationships".follower_id WHERE (("relationships".followed_id = 3))[0m
+Rendered shared/_stats.html.erb (53.0ms)
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM "transactions" WHERE (user_id IN (SELECT followed_id FROM relationships
+ WHERE follower_id = 3))
+Rendered shared/_feed.html.erb (3.1ms)
+Rendered shared/_header.html.erb (4.4ms)
+Rendered devise/menu/_registration_items.html.erb (1.2ms)
+Rendered devise/menu/_login_items.html.erb (3.0ms)
+Rendered shared/_topbar.html.erb (8.5ms)
+Rendered shared/_side_bar.html.erb (0.8ms)
+Rendered shared/_notice_messages.html.erb (1.1ms)
+Rendered shared/_footer.html.erb (1.2ms)
+Rendered pages/home.html.erb within layouts/application (114.9ms)
+Completed 200 OK in 375ms (Views: 119.7ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 07:57:06 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/transactions" for 127.0.0.1 at 2011-11-30 07:57:06 -0500
+  Processing by TransactionsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mTransaction Load (0.3ms)[0m  SELECT "transactions".* FROM "transactions" WHERE ("transactions".user_id = 3) ORDER BY transactions.date DESC
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT SUM("transactions"."amount") AS sum_id FROM "transactions" WHERE ("transactions".user_id = 3)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_transactions_index_html_erb___1709149357743682967_36394020_3263932303221010907 at /home/ashwin/Dropbox/Courses/WebAppDev/centlog_repo/centlog/app/views/transactions/index.html.erb:1)
+Rendered shared/_header.html.erb (4.8ms)
+Rendered devise/menu/_registration_items.html.erb (1.1ms)
+Rendered devise/menu/_login_items.html.erb (1.1ms)
+Rendered shared/_topbar.html.erb (7.6ms)
+Rendered shared/_side_bar.html.erb (0.8ms)
+Rendered shared/_notice_messages.html.erb (4.5ms)
+Rendered shared/_footer.html.erb (1.3ms)
+Rendered transactions/index.html.erb within layouts/application (38.1ms)
+Completed 200 OK in 362ms (Views: 47.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 07:57:07 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2011-11-30 07:57:08 -0500
+  Processing by TransactionsController#new as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mTransaction Load (0.3ms)[0m  [1mSELECT "transactions".* FROM "transactions" WHERE ("transactions".user_id = 3) ORDER BY transactions.date DESC[0m
+Rendered transactions/_form.html.erb (106.5ms)
+Rendered shared/_header.html.erb (4.6ms)
+Rendered devise/menu/_registration_items.html.erb (3.1ms)
+Rendered devise/menu/_login_items.html.erb (1.4ms)
+Rendered shared/_topbar.html.erb (9.3ms)
+Rendered shared/_side_bar.html.erb (1.2ms)
+Rendered shared/_notice_messages.html.erb (1.6ms)
+Rendered shared/_footer.html.erb (1.2ms)
+Rendered transactions/new.html.erb within layouts/application (144.9ms)
+Completed 200 OK in 401ms (Views: 158.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/transactions/images/favicon.ico" for 127.0.0.1 at 2011-11-30 07:57:09 -0500
+
+ActionController::RoutingError (No route matches "/transactions/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2011-11-30 07:57:17 -0500
+  Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NDba665IPnok0VGwEkNbr1GK64wJwC7qFb3DHyM6GMc=", "transaction"=>{"user_id"=>"3", "description"=>"asdf", "amount"=>"12", "tag"=>"Food", "location"=>"PA", "date(1i)"=>"2011", "date(2i)"=>"11", "date(3i)"=>"30"}, "commit"=>"Done"}
+  [1m[35mUser Load (6.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+WARNING: Can't mass-assign protected attributes: location
+  [1m[36mAREL (3.1ms)[0m  [1mINSERT INTO "transactions" ("user_id", "amount", "date", "location", "description", "tag", "created_at", "updated_at") VALUES (3, 12.0, '2011-11-30', NULL, 'asdf', 'Food', '2011-11-30 12:57:18.274330', '2011-11-30 12:57:18.274330')[0m
+Redirected to http://localhost:3000/transactions/1
+Completed 302 Found in 399ms
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2011-11-30 07:57:18 -0500
+  Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mTransaction Load (0.6ms)[0m  [1mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = 1 ORDER BY transactions.date DESC LIMIT 1[0m
+Rendered shared/_header.html.erb (3.7ms)
+Rendered devise/menu/_registration_items.html.erb (3.1ms)
+Rendered devise/menu/_login_items.html.erb (1.4ms)
+Rendered shared/_topbar.html.erb (9.2ms)
+Rendered shared/_side_bar.html.erb (0.8ms)
+Rendered shared/_notice_messages.html.erb (1.1ms)
+Rendered shared/_footer.html.erb (1.2ms)
+Rendered transactions/show.html.erb within layouts/application (51.0ms)
+Completed 200 OK in 245ms (Views: 67.7ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/transactions/images/favicon.ico" for 127.0.0.1 at 2011-11-30 07:57:19 -0500
+
+ActionController::RoutingError (No route matches "/transactions/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/transactions" for 127.0.0.1 at 2011-11-30 07:57:21 -0500
+  Processing by TransactionsController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mTransaction Load (0.5ms)[0m  [1mSELECT "transactions".* FROM "transactions" WHERE ("transactions".user_id = 3) ORDER BY transactions.date DESC[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT SUM("transactions"."amount") AS sum_id FROM "transactions" WHERE ("transactions".user_id = 3)
+  [1m[36mSQL (0.7ms)[0m  [1mSELECT SUM("transactions"."amount") AS sum_id FROM "transactions" WHERE ("transactions".user_id = 3) AND (tag = 'Food')[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_transactions_index_html_erb___1709149357743682967_35400800_3263932303221010907 at /home/ashwin/Dropbox/Courses/WebAppDev/centlog_repo/centlog/app/views/transactions/index.html.erb:1)
+Rendered shared/_header.html.erb (3.9ms)
+Rendered devise/menu/_registration_items.html.erb (1.0ms)
+Rendered devise/menu/_login_items.html.erb (1.1ms)
+Rendered shared/_topbar.html.erb (6.2ms)
+Rendered shared/_side_bar.html.erb (0.8ms)
+Rendered shared/_notice_messages.html.erb (0.9ms)
+Rendered shared/_footer.html.erb (1.1ms)
+Rendered transactions/index.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 292ms (Views: 46.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 07:57:22 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-30 07:57:51 -0500
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mAlert Load (0.3ms)[0m  [1mSELECT "alerts".* FROM "alerts" WHERE ("alerts".user_id = 3)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "transactions" WHERE ("transactions".user_id = 3)
+Rendered shared/_user_info.html.erb (22.4ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users".id = "relationships".followed_id WHERE (("relationships".follower_id = 3))[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users".id = "relationships".follower_id WHERE (("relationships".followed_id = 3))
+Rendered shared/_stats.html.erb (75.7ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "transactions" WHERE (user_id IN (SELECT followed_id FROM relationships
+ WHERE follower_id = 3))[0m
+Rendered shared/_feed.html.erb (3.3ms)
+Rendered shared/_header.html.erb (11.2ms)
+Rendered devise/menu/_registration_items.html.erb (1.3ms)
+Rendered devise/menu/_login_items.html.erb (1.2ms)
+Rendered shared/_topbar.html.erb (6.4ms)
+Rendered shared/_side_bar.html.erb (0.8ms)
+Rendered shared/_notice_messages.html.erb (1.0ms)
+Rendered shared/_footer.html.erb (1.4ms)
+Rendered pages/home.html.erb within layouts/application (162.1ms)
+Completed 200 OK in 488ms (Views: 168.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2011-11-30 07:57:52 -0500
+
+ActionController::RoutingError (No route matches "/images/favicon.ico"):
+  
+
+Rendered /home/ashwin/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)

@@ -25,7 +25,7 @@
 				<div class="slide">
 					<h2>I remember now!</h2>
 					<p>
-						<%= image_tag "2.jpg", :alt => 'Not found' %>
+						<%= image_tag "alert.jpg", :alt => 'Not found' %>
 					</p>
 					<p>
 						An effective alert mechanism keeps the user updated about the expenses that he has incurred.
@@ -45,7 +45,7 @@
 				<div class="slide">
 					<h2>Groups</h2>
 					<p>
-						<%= image_tag "798_money1.jpg", :alt => 'Not found' %>
+						<%= image_tag "group.png", :alt => 'Not found' %>
 					</p>
 					<p>
 						Groups is another useful feature that the website provides. Shared bills can be entered.
@@ -61,15 +61,21 @@
 		<br/>
 		<% if user_signed_in? %>
 		<%else%>
-		<div class="well" style="background-color: #688; border: none;width: 230px ">
+		<div class="well" style="background-color: #EBEBEB; border: none;width: 230px ">
 			<div>
-				<%= form_for("user", :url => user_session_path) do |f| %>
-				<%= f.label :email %><%= f.email_field :email %>
-				<%= f.label :password %>
+				<h4>Sign in</h4>
+				<br />
+				<%= form_for("user", :url => user_session_path) do |f| %> <b>Email</b><%= f.email_field :email %>
+				<br />
+				<br />
+				<b style="padding-top: 15px;">Password</b>
+				<br />
 				<%= f.password_field :password %>
-				<%= f.submit "Sign in",:class => "btn primary medium" %>
+				<br/>
+				<br/>
+				<%= f.submit "Sign in",:class => "btn primary small" %>
 			</div>
-			<% end %> <h5>Not yet a member?</h5> <%= link_to "Register now >>", new_user_registration_path,:class => "btn primary medium" %>
+			<% end %> <h4>Not a member?</h4> <%= link_to "Register now >>", new_user_registration_path,:class => "btn primary small" %>
 		</div>
 		<br/>
 		<%end%>
