@@ -47,6 +47,18 @@ Centlog::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
+  config.action_dispatch.best_standards_support = :builtin
+
+  config.active_support.deprecation = :notify
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+
+  config.action_mailer.default :charset => "utf-8"
+
+  config.action_mailer.default_url_options = {  :host => 'furious-meadow-9597.heroku.com' }
+  config.active_support.deprecation = :log
+
   config.action_mailer.smtp_settings ={
     :enable_starttls_auto => true,
     :address            => 'smtp.gmail.com',
