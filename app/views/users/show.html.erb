@@ -1,0 +1,14 @@
+<p id="notice">
+	<%= notice %>
+</p>
+<div class="row show-grid">
+	<div class="span8">
+		<h2><%=@user.first_name%> <%=@user.last_name%></h2>
+		<h4> <%= link_to @user.email, @user %> </h4>
+	</div>
+	<div class="span8">
+		<%= render 'follow_form' if signed_in? %>
+		<%= render 'shared/stats' %>
+	</div>
+</div>
+
